@@ -100,19 +100,8 @@ h3 {
     --fw-600: 600;
 }
 
-/* body {
-    max min-height: 100vh;
-    color: var(--Soft-blue);
-    background-color: var(--main-bg);
-    font-family: var(--ff-outfit);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 body {
     min-height: 100vh;
-    color: var(--Soft-blue);
     background-color: var(--main-bg);
     font-family: var(--ff-outfit);
     display: flex;
@@ -121,6 +110,7 @@ body {
 }
 
 .nft_card {
+    color: var(--Soft-blue);
     background-color: var(--card-bg);
     width: 250px;
     height: 400px;
@@ -137,6 +127,32 @@ body {
     gap: .5rem;
 }
 
+.nft_img {
+    position: relative;
+}
+
+.nft_img div {
+    background-color: var(--Cyan);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.nft_img div:hover {
+    opacity: .5;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.nft_img div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .nft_mainImg {
     width: 100%;
     height: 100%;
@@ -150,7 +166,6 @@ body {
 
 .nft_desc {
     font-size: .7rem;
-    color: var(--Soft-blue);
     line-height: 1rem;
     font-weight: var(--fw-300);
 }
@@ -173,14 +188,12 @@ body {
 .nft_clock {
     display: flex;
     align-items: center;
-    color: var(--Soft-blue);
     gap: .3rem;
     font-size: .7rem;
 }
 
 .nft_avatar {
     display: flex;
-    color: var(--Soft-blue);
     font-size: .7rem;
 }
 
@@ -194,4 +207,16 @@ body {
 span {
     color: var(--White);
     margin-left: 5px;
+}
+
+.nft_mainImg,
+.nft_title,
+.avatar_img,
+span {
+    cursor: pointer;
+}
+
+.nft_title:hover,
+span:hover {
+    color: var(--Cyan);
 }
